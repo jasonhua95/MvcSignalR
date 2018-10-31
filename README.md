@@ -16,8 +16,8 @@ MVC的SignalR例子,这是一个SignalR学习的学习例子，从网上下载�
 > 3. 高频繁从服务器更新的应用，例如：实时在线游戏
 
 ### 官方网址
-1. https://docs.microsoft.com/en-us/aspnet/signalr/  
-2. https://github.com/SignalR/SignalR  
+> 1. https://docs.microsoft.com/en-us/aspnet/signalr/  
+> 2. https://github.com/SignalR/SignalR  
 
 ### 运行示例图
 ![运行图](https://github.com/jasonhua95/MvcSignalR/blob/master/rundemo.jpg)
