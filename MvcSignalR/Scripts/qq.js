@@ -5,7 +5,17 @@ $(function () {
     chat.client.receiveMessage = function (message) {
         receiveMessage(message);
     };
-    $.connection.hub.start();
+    var hubStartDone = function () {
+        $.connection.hub.start().done();
+    };
+    hubStartDone();
+
+    $.connection.hub.disconnected(function () {
+        setTimeout(function () {
+            console.log("disconnected");
+            hubStartDone();
+        }, 50000); // Restart connection after 50 seconds.
+    });
 
     // 左边列表
     $('.conLeft li').on('click', function () {

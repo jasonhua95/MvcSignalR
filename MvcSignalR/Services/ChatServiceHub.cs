@@ -14,8 +14,8 @@ namespace MvcSignalR.Services
 	/// </summary>
 	public class ChatServiceHub : Hub
 	{
-		//所有的ConnectionId
-		public static ConcurrentDictionary<string,DateTime> AllConnectionIDs = new ConcurrentDictionary<string, DateTime>();
+		//所有的ConnectionId，时间的作用将来设置定时器，每隔多长时间清理下无用的ConnectionId
+		public static ConcurrentDictionary<string, DateTime> AllConnectionIDs = new ConcurrentDictionary<string, DateTime>();
 		//用户的ConnectionID，一个ID对应一个用户
 		public static ConcurrentDictionary<string, string> UserConnectionIDs = new ConcurrentDictionary<string, string>();
 
